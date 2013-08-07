@@ -1,9 +1,7 @@
 <?php
 
-
 $language = $_POST["lan"];
 $length = $_POST["length"];
-
 
 $array = [
 	"latin" => [
@@ -55,7 +53,7 @@ echo (sentence_return($recursearray,$array,$language));
 
 function recurse($len, $stack)
 	{
-		if ($len > 9)
+		if ($len > 10)
 		{
 			$len -= $random = (rand(0,9));
 			array_push($stack, $random);
@@ -67,8 +65,6 @@ function recurse($len, $stack)
 			return $stack;
 		}
 	}
-
-
 
 function sentence_return($numbers, $sentences, $lan) {
 	$string = "";
